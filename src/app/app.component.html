@@ -1,0 +1,28 @@
+<table class="blueTable">
+<thead>
+<th>Name</th>
+<th>Total Points</th>
+<th> January </th>
+<th> February </th>
+<th> March</th>
+<th> April </th>
+<th> May</th>
+<th> June</th>
+<th> July</th>
+<th> Augest</th>
+<th> September</th>
+<th> October</th>
+<th> November</th>
+<th> December </th>
+</thead>
+<tbody>
+  
+<tr *ngFor="let customer of customers; let i = index">
+<td>{{customer.name}}</td>
+<td>{{customer.totalPoints}}</td>
+  <ng-container *ngFor="let month of months; let j = index">
+    <td>{{points[j][i]}}</td>
+  </ng-container>
+</tr>
+</tbody>
+</table>
